@@ -1,0 +1,262 @@
+@charset "UTF-8";
+/*
+Theme Name: Le un
+Author: Cyprien / Filipe / François
+Description: Les roulottes de ses morts
+Version: 1.0
+Tags: black, white
+Text Domain: Le un
+*/
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  text-decoration: none;
+}
+
+header {
+  height: 100px;
+  width: 100%;
+  background-color: rgba(21, 28, 43, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 90%;
+}
+
+header nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
+header nav div ul {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header nav div ul li {
+  list-style-type: none;
+}
+
+header nav div ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+}
+
+header nav div ul li a:hover {
+  color: #EAAE0B;
+  text-shadow: 0 0 10px #000000;
+}
+
+body #accueil #hero_accueil {
+  background: url(./img/hero_accueil.jpg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+body #accueil #presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 0;
+}
+
+body #accueil #presentation #content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #accueil #presentation #content .wp-block-group {
+  margin: 2% 0;
+  width: 80%;
+}
+
+body #accueil #presentation #content .wp-block-group .wp-block-group__inner-container .alignwide {
+  margin: 0;
+  width: 100%;
+  background-color: #F6F6F6;
+}
+
+body #accueil #presentation #content .wp-block-group .wp-block-group__inner-container .alignwide .wp-block-group__inner-container .presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #accueil #presentation #content .wp-block-group .wp-block-group__inner-container .alignwide .wp-block-group__inner-container .presentation figure {
+  width: 50%;
+  overflow: hidden;
+}
+
+body #accueil #presentation #content .wp-block-group .wp-block-group__inner-container .alignwide .wp-block-group__inner-container .presentation figure img {
+  width: auto;
+  height: 100%;
+}
+
+body #accueil #presentation #content .wp-block-group .wp-block-group__inner-container .alignwide .wp-block-group__inner-container .presentation .wp-block-media-text__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+body #accueil #presentation #content .wp-block-group .wp-block-group__inner-container .alignwide .wp-block-group__inner-container .presentation .wp-block-media-text__content h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #000000;
+  padding: 20px 0;
+}
+
+body #accueil #presentation #content .wp-block-group .wp-block-group__inner-container .alignwide .wp-block-group__inner-container .presentation .wp-block-media-text__content hr {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #EAAE0B;
+  height: 1px;
+  width: 40%;
+  margin: 5px 0;
+}
+
+body #accueil #presentation #content .wp-block-group .wp-block-group__inner-container .alignwide .wp-block-group__inner-container .presentation .wp-block-media-text__content p {
+  padding: 20px 0;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #000000;
+  text-align: justify;
+}
+
+body #accueil #presentation #content .nos_formules {
+  margin: 2% 0;
+  width: 80%;
+  background-color: #F6F6F6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #accueil #presentation #content .nos_formules .wp-block-group__inner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+body #accueil #presentation #content .nos_formules .wp-block-group__inner-container h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #000000;
+  padding: 20px 0;
+}
+
+body #accueil #presentation #content .nos_formules .wp-block-group__inner-container hr {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #EAAE0B;
+  height: 1px;
+  width: 20%;
+  margin: 5px 0;
+}
+
+body #accueil #presentation #content .nos_formules .wp-block-group__inner-container .alignnormal {
+  width: 100%;
+}
+
+body #accueil #presentation #content .nos_formules .wp-block-group__inner-container .alignnormal .slider {
+  width: 100%;
+  padding: 10px 0;
+}
+
+body #accueil #presentation #content .nos_formules .wp-block-group__inner-container .alignnormal .slider ul li {
+  list-style-type: none;
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+
+body #accueil #presentation #content .nos_formules .wp-block-group__inner-container .alignnormal .slider ul li img {
+  width: 100%;
+  height: auto;
+}
+
+body #accueil #presentation #content .nos_formules .wp-block-group__inner-container .alignnormal .slider ul li .caption-wrap {
+  bottom: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+}
+
+body #accueil #presentation #content .nos_formules .wp-block-group__inner-container .alignnormal .slider ul li .caption-wrap .caption {
+  color: #FFFFFF;
+  padding: 15px 10px;
+}
+/*# sourceMappingURL=style.css.map */

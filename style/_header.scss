@@ -1,0 +1,47 @@
+header {
+    height: 100px;
+    width: 100%;
+    background-color: rgba(#151C2B, 0.50);
+    display: flex;
+    justify-content: center;
+    position: absolute;
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+        width: 90%;
+
+        div {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 80%;
+
+            ul {
+                width: 60%;
+                display: flex;
+                justify-content: space-evenly;
+
+                li {
+                    list-style-type: none;
+
+                    a {
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-size: 1rem;
+                        font-weight: 500;
+                        color: #FFFFFF;
+                        font-family: $font_titre_sct;
+                    }
+
+                    a:hover {
+                        color: $couleur_1;
+                        text-shadow: 0 0 10px #000000;
+                    }
+                }
+            }
+        }
+    }
+}

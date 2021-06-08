@@ -14,4 +14,177 @@ Text Domain: Le un
     text-decoration: none;
 }
 
-@import "variables";
+@import "./style/variables";
+@import "./style/header";
+
+body {
+
+    // PAGE ACCUEIL
+    #accueil {
+
+        // SECTION HERO
+        #hero_accueil {
+            background: url(./img/hero_accueil.jpg);
+            background-size: cover;
+
+            height: 100vh;
+            width: 100%;
+
+        }
+
+        // SECTION PRESENTATION
+        #presentation {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px 0;
+
+            #content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                //  PRESENTATION
+                .wp-block-group {
+                    margin: 2% 0;
+                    width: 80%;
+
+                    .wp-block-group__inner-container {
+                        .alignwide {
+                            margin: 0;
+                            width: 100%;
+                            background-color: $couleur_4;
+
+                            .wp-block-group__inner-container {
+
+
+                                .presentation {
+                                    display: flex;
+                                    justify-content: space-between;
+
+
+                                    // IMAGE
+                                    figure {
+                                        width: 50%;
+                                        overflow: hidden;
+
+                                        img {
+                                            width: auto;
+                                            height: 100%;
+                                        }
+                                    }
+
+                                    // SECTION PRESENTATION
+                                    .wp-block-media-text__content {
+                                        display: flex;
+                                        flex-direction: column;
+                                        width: 50%;
+
+                                        // TITRE SECTION
+                                        h2 {
+                                            font-family: $font_titre_sct;
+                                            font-weight: 400;
+                                            font-size: 2rem;
+                                            color: #000000;
+                                            padding: 20px 0;
+                                        }
+
+                                        hr {
+                                            align-self: center;
+                                            background-color: $couleur_1;
+                                            height: 1px;
+                                            width: 40%;
+                                            margin: 5px 0;
+                                        }
+
+                                        p {
+                                            padding: 20px 0;
+                                            font-family: $font_paragraphe;
+                                            font-weight: 500;
+                                            font-size: 1.5rem;
+                                            color: #000000;
+                                            text-align: justify;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                // SECTION NOS FORMULES
+                .nos_formules {
+                    margin: 2% 0;
+                    width: 80%;
+                    background-color: $couleur_4;
+                    display: flex;
+                    justify-content: center;
+
+                    .wp-block-group__inner-container {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+
+                        // TITRE SECTION
+                        h2 {
+                            font-family: $font_titre_sct;
+                            font-weight: 400;
+                            font-size: 2rem;
+                            color: #000000;
+                            padding: 20px 0;
+                        }
+
+                        // SEPARATION
+                        hr {
+                            align-self: center;
+                            background-color: $couleur_1;
+                            height: 1px;
+                            width: 20%;
+                            margin: 5px 0;
+                        }
+
+                        // SLIDER
+                        .alignnormal {
+                            width: 100%;
+
+                            .slider {
+                                width: 100%;
+                                padding: 10px 0;
+
+                                ul {
+                                    li {
+                                        list-style-type: none;
+                                        position: relative;
+                                        height: 60vh;
+                                        overflow: hidden;
+
+
+                                        img {
+                                            width: 100%;
+                                            height: auto;
+                                        }
+
+                                        .caption-wrap {
+                                            bottom: 0;
+                                            position: absolute;
+                                            background-color: rgba($color: #000000, $alpha: .6);
+                                            width: 100%;
+
+                                            .caption {
+                                                color: #FFFFFF;
+                                                padding: 15px 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
