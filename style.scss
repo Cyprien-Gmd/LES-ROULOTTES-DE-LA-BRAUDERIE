@@ -12,6 +12,7 @@ Text Domain: Le un
     margin: 0;
     outline: none;
     text-decoration: none;
+    list-style-type: none;
 }
 
 @import "./style/variables";
@@ -21,167 +22,230 @@ body {
 
     // PAGE ACCUEIL
     #accueil {
+        #content {
 
-        // SECTION HERO
-        #hero_accueil {
-            background: url(./img/hero_accueil.jpg);
-            background-size: cover;
+            // SECTION HERO
+            .wp-block-columns:nth-child(1) {
+                .wp-block-column {
+                    .wp-block-cover {
+                        height: 100vh;
+                        background-color: transparent;
 
-            height: 100vh;
-            width: 100%;
+                        img {
+                            width: 100%;
+                            height: 100vh;
+                        }
 
+                        .wp-block-cover__inner-container {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            p {
+                                text-transform: uppercase;
+                                text-align: center;
+                                font-family: $font_h1;
+                                font-weight: 400;
+                                font-size: 5.125rem;
+                                letter-spacing: 10%;
+                                color: #FFFFFF;
+                                text-shadow: 0 0 8px #000000;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // SECTION PRESENTATION
+            .wp-block-columns:nth-child(2) {
+                width: 80%;
+                margin: auto;
+                background-color: $couleur_4;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                // IMG
+                .wp-block-column:nth-child(1) {
+
+                    figure {
+                        height: 70%;
+                        overflow: hidden;
+
+                        img {
+                            height: 80%;
+                        }
+                    }
+
+                }
+
+                // TEXTE
+                .wp-block-column:nth-child(2) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    h2 {
+                        align-self: center;
+                        font-family: $font_titre_sct;
+                        font-weight: 400;
+                        font-size: 2rem;
+                        color: #000000;
+                        padding: 10px;
+                    }
+
+                    hr {
+                        height: 2px;
+                        background-color: $couleur_1;
+                        border-radius: 1px;
+                        width: 60%;
+                        margin: 5px 0;
+                        border: 0;
+                    }
+
+                    .separator_1 {
+                        margin-left: 20%;
+                    }
+
+                    .separator_2 {
+                        margin-left: 25%;
+                    }
+
+
+                    p {
+                        font-family: $font_paragraphe;
+                        font-weight: 500;
+                        font-size: 1.5rem;
+                        color: #000000;
+                        text-align: justify;
+                        padding: 10px;
+                    }
+
+                }
+
+            }
+
+            // NOS FORMULES
+            .wp-block-group:nth-child(1) {
+                width: 80%;
+                margin: auto;
+                background-color: $couleur_4;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .wp-block-group__inner-container {
+
+                    h2 {
+                        align-self: center;
+                        font-family: $font_titre_sct;
+                        font-weight: 400;
+                        font-size: 2rem;
+                        color: #000000;
+                        padding: 10px;
+                    }
+
+                    hr {
+                        height: 2px;
+                        background-color: $couleur_1;
+                        border-radius: 1px;
+                        width: 60%;
+                        margin: 5px 0;
+                        border: 0;
+                    }
+
+                    .separator_1 {
+                        margin-left: 20%;
+                    }
+
+                    .separator_2 {
+                        margin-left: 25%;
+                    }
+                }
+            }
         }
 
-        // SECTION PRESENTATION
-        #presentation {
-
+        // SECTION NOS FORMULES
+        #nosformules_accueil {
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 25px 0;
 
-            #content {
+            .container {
+                width: 80%;
+                background-color: $couleur_4;
                 display: flex;
                 flex-direction: column;
+                justify-content: space-between;
                 align-items: center;
 
-                //  PRESENTATION
-                .wp-block-group {
-                    margin: 2% 0;
-                    width: 80%;
-
-                    .wp-block-group__inner-container {
-                        .alignwide {
-                            margin: 0;
-                            width: 100%;
-                            background-color: $couleur_4;
-
-                            .wp-block-group__inner-container {
-
-
-                                .presentation {
-                                    display: flex;
-                                    justify-content: space-between;
-
-
-                                    // IMAGE
-                                    figure {
-                                        width: 50%;
-                                        overflow: hidden;
-
-                                        img {
-                                            width: auto;
-                                            height: 100%;
-                                        }
-                                    }
-
-                                    // SECTION PRESENTATION
-                                    .wp-block-media-text__content {
-                                        display: flex;
-                                        flex-direction: column;
-                                        width: 50%;
-
-                                        // TITRE SECTION
-                                        h2 {
-                                            font-family: $font_titre_sct;
-                                            font-weight: 400;
-                                            font-size: 2rem;
-                                            color: #000000;
-                                            padding: 20px 0;
-                                        }
-
-                                        hr {
-                                            align-self: center;
-                                            background-color: $couleur_1;
-                                            height: 1px;
-                                            width: 40%;
-                                            margin: 5px 0;
-                                        }
-
-                                        p {
-                                            padding: 20px 0;
-                                            font-family: $font_paragraphe;
-                                            font-weight: 500;
-                                            font-size: 1.5rem;
-                                            color: #000000;
-                                            text-align: justify;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                    }
-                }
-
-                // SECTION NOS FORMULES
-                .nos_formules {
-                    margin: 2% 0;
-                    width: 80%;
-                    background-color: $couleur_4;
+                // TEXTE
+                .texte_sct_area {
+                    width: 48%;
                     display: flex;
+                    flex-direction: column;
                     justify-content: center;
+                    align-items: center;
 
-                    .wp-block-group__inner-container {
+                    // TITRE SECTION
+                    h2 {
+                        font-family: $font_titre_sct;
+                        font-weight: 400;
+                        font-size: 2rem;
+                        color: #000000;
+                        padding: 10px;
+                    }
+
+                    // SEPARATOR
+                    .span_separators {
+                        width: 70%;
+                        height: 30px;
+                        margin: auto;
                         display: flex;
                         flex-direction: column;
+                        justify-content: space-around;
                         align-items: center;
-                        width: 100%;
 
-                        // TITRE SECTION
-                        h2 {
-                            font-family: $font_titre_sct;
-                            font-weight: 400;
-                            font-size: 2rem;
-                            color: #000000;
-                            padding: 20px 0;
-                        }
-
-                        // SEPARATION
-                        hr {
-                            align-self: center;
+                        span {
+                            height: 2px;
                             background-color: $couleur_1;
-                            height: 1px;
-                            width: 20%;
-                            margin: 5px 0;
+                            border-radius: 2px;
+                            width: 80%;
                         }
 
-                        // SLIDER
-                        .alignnormal {
-                            width: 100%;
-
-                            .slider {
-                                width: 100%;
-                                padding: 10px 0;
-
-                                ul {
-                                    li {
-                                        list-style-type: none;
-                                        position: relative;
-                                        height: 60vh;
-                                        overflow: hidden;
-
-
-                                        img {
-                                            width: 100%;
-                                            height: auto;
-                                        }
-
-                                        .caption-wrap {
-                                            bottom: 0;
-                                            position: absolute;
-                                            background-color: rgba($color: #000000, $alpha: .6);
-                                            width: 100%;
-
-                                            .caption {
-                                                color: #FFFFFF;
-                                                padding: 15px 10px;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
+                        .separator_1 {
+                            align-self: flex-start;
                         }
+
+                        .separator_2 {
+                            align-self: flex-end;
+                        }
+                    }
+
+                }
+
+                // SLIDER
+
+                // BUTTON
+                .btn_rouge {
+                    background-color: $couleur_2;
+                    border-radius: 10px;
+                    height: 50px;
+                    width: 225px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    a {
+                        font-family: $font_titre_sct;
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        color: #FFFFFF;
+                        text-transform: uppercase;
+
                     }
                 }
             }

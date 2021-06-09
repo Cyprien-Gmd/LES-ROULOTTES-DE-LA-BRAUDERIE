@@ -4,18 +4,19 @@
 
 <main id="accueil">
 
-    <section id="hero_accueil">
-    
 
-    
+
+    <!-- HERO BANNER -->
+    <section id="hero_accueil">        
     </section>
 
-    <section id="presentation">
-
-        <span id="content">
-            <?php the_content(); ?>            
-        </span>
+    <span id="content">
+        <?php the_content(); ?>            
+    </span>
 
 
-    </section>
+
 </main>
+
+
+<?php get_footer(); ?>

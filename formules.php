@@ -2,3 +2,5 @@
 // Template Name: Formules
 ?>
 
+
+<?php get_footer(); ?>

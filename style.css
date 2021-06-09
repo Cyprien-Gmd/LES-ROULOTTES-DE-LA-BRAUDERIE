@@ -12,6 +12,7 @@ Text Domain: Le un
   margin: 0;
   outline: none;
   text-decoration: none;
+  list-style-type: none;
 }
 
 header {
@@ -25,50 +26,94 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 75px;
+  }
+}
+
+@media (max-width: 375px) {
+  header {
+    height: 50px;
+  }
 }
 
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  width: 90%;
+  width: 80%;
 }
 
-header nav div {
+@media (max-width: 768px) {
+  header nav {
+    width: 90%;
+  }
+}
+
+header nav #logo_site {
+  height: 80%;
+  width: auto;
+}
+
+header nav #logo_site img {
+  height: 100%;
+}
+
+header nav #nav_full {
+  width: 80%;
+  list-style-type: none;
+}
+
+@media (max-width: 1300px) {
+  header nav #nav_full {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav #nav_full {
+    display: none;
+  }
+}
+
+header nav #nav_full div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 80%;
 }
 
-header nav div ul {
-  width: 60%;
+header nav #nav_full div ul {
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-header nav div ul li {
+header nav #nav_full div ul li {
   list-style-type: none;
 }
 
-header nav div ul li a {
+header nav #nav_full div ul li a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1rem;
@@ -77,19 +122,298 @@ header nav div ul li a {
   font-family: "Montserrat", sans-serif;
 }
 
-header nav div ul li a:hover {
+@media (max-width: 1000px) {
+  header nav #nav_full div ul li a {
+    font-size: 0.75rem;
+  }
+}
+
+header nav #nav_full div ul li a:hover {
   color: #EAAE0B;
   text-shadow: 0 0 10px #000000;
 }
 
-body #accueil #hero_accueil {
-  background: url(./img/hero_accueil.jpg);
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
+header nav .menu_burger {
+  display: none;
 }
 
-body #accueil #presentation {
+@media (max-width: 768px) {
+  header nav .menu_burger {
+    display: block;
+  }
+}
+
+header nav .menu_burger .overlay {
+  height: 0vh;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #2D2D2D;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header nav .menu_burger .overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 60px;
+  color: #FFFFFF;
+}
+
+header nav .menu_burger .overlay .closebtn:hover {
+  color: #EAAE0B;
+}
+
+header nav .menu_burger .overlay .overlay-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header nav .menu_burger .overlay .overlay-content a {
+  padding: 20px 0;
+  text-decoration: none;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 375px) {
+  header nav .menu_burger .overlay .overlay-content a {
+    font-size: 1rem;
+  }
+}
+
+header nav .menu_burger .overlay .overlay-content a:hover,
+header nav .menu_burger .overlay .overlay-content a:focus {
+  color: #EAAE0B;
+}
+
+header nav .menu_burger .overlay .overlay-content .separator {
+  height: 2px;
+  background-color: #EAAE0B;
+  border-radius: 2px;
+  width: 50%;
+  margin: 30px 0;
+}
+
+header nav .menu_burger .overlay .overlay-content #info_burger ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .menu_burger .overlay .overlay-content #info_burger ul li {
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  padding: 15px 0;
+  font-weight: 400;
+}
+
+@media (max-width: 375px) {
+  header nav .menu_burger .overlay .overlay-content #info_burger ul li {
+    font-size: 1rem;
+  }
+}
+
+header nav .menu_burger .overlay .overlay-content #info_burger ul li a:hover {
+  color: #EAAE0B;
+}
+
+header nav .menu_burger #burger_icon i {
+  color: #FFFFFF;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 20px;
+}
+
+body #accueil #content .wp-block-columns:nth-child(1) .wp-block-column .wp-block-cover {
+  height: 100vh;
+  background-color: transparent;
+}
+
+body #accueil #content .wp-block-columns:nth-child(1) .wp-block-column .wp-block-cover img {
+  width: 100%;
+  height: 100vh;
+}
+
+body #accueil #content .wp-block-columns:nth-child(1) .wp-block-column .wp-block-cover .wp-block-cover__inner-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #accueil #content .wp-block-columns:nth-child(1) .wp-block-column .wp-block-cover .wp-block-cover__inner-container p {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 5.125rem;
+  letter-spacing: 10%;
+  color: #FFFFFF;
+  text-shadow: 0 0 8px #000000;
+}
+
+body #accueil #content .wp-block-columns:nth-child(2) {
+  width: 80%;
+  margin: auto;
+  background-color: #F6F6F6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child(1) figure {
+  height: 70%;
+  overflow: hidden;
+}
+
+body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child(1) figure img {
+  height: 80%;
+}
+
+body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child(2) h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #000000;
+  padding: 10px;
+}
+
+body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child(2) hr {
+  height: 2px;
+  background-color: #EAAE0B;
+  border-radius: 1px;
+  width: 60%;
+  margin: 5px 0;
+  border: 0;
+}
+
+body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child(2) .separator_1 {
+  margin-left: 20%;
+}
+
+body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child(2) .separator_2 {
+  margin-left: 25%;
+}
+
+body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child(2) p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #000000;
+  text-align: justify;
+  padding: 10px;
+}
+
+body #accueil #content .wp-block-group:nth-child(1) {
+  width: 80%;
+  margin: auto;
+  background-color: #F6F6F6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #accueil #content .wp-block-group:nth-child(1) .wp-block-group__inner-container h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #000000;
+  padding: 10px;
+}
+
+body #accueil #content .wp-block-group:nth-child(1) .wp-block-group__inner-container hr {
+  height: 2px;
+  background-color: #EAAE0B;
+  border-radius: 1px;
+  width: 60%;
+  margin: 5px 0;
+  border: 0;
+}
+
+body #accueil #content .wp-block-group:nth-child(1) .wp-block-group__inner-container .separator_1 {
+  margin-left: 20%;
+}
+
+body #accueil #content .wp-block-group:nth-child(1) .wp-block-group__inner-container .separator_2 {
+  margin-left: 25%;
+}
+
+body #accueil #nosformules_accueil {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,7 +426,9 @@ body #accueil #presentation {
   padding: 25px 0;
 }
 
-body #accueil #presentation #content {
+body #accueil #nosformules_accueil .container {
+  width: 80%;
+  background-color: #F6F6F6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,42 +436,16 @@ body #accueil #presentation #content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-body #accueil #presentation #content .wp-block-group {
-  margin: 2% 0;
-  width: 80%;
-}
-
-body #accueil #presentation #content .wp-block-group .wp-block-group__inner-container .alignwide {
-  margin: 0;
-  width: 100%;
-  background-color: #F6F6F6;
-}
-
-body #accueil #presentation #content .wp-block-group .wp-block-group__inner-container .alignwide .wp-block-group__inner-container .presentation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-body #accueil #presentation #content .wp-block-group .wp-block-group__inner-container .alignwide .wp-block-group__inner-container .presentation figure {
-  width: 50%;
-  overflow: hidden;
-}
-
-body #accueil #presentation #content .wp-block-group .wp-block-group__inner-container .alignwide .wp-block-group__inner-container .presentation figure img {
-  width: auto;
-  height: 100%;
-}
-
-body #accueil #presentation #content .wp-block-group .wp-block-group__inner-container .alignwide .wp-block-group__inner-container .presentation .wp-block-media-text__content {
+body #accueil #nosformules_accueil .container .texte_sct_area {
+  width: 48%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,110 +453,78 @@ body #accueil #presentation #content .wp-block-group .wp-block-group__inner-cont
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body #accueil #presentation #content .wp-block-group .wp-block-group__inner-container .alignwide .wp-block-group__inner-container .presentation .wp-block-media-text__content h2 {
+body #accueil #nosformules_accueil .container .texte_sct_area h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 2rem;
   color: #000000;
-  padding: 20px 0;
+  padding: 10px;
 }
 
-body #accueil #presentation #content .wp-block-group .wp-block-group__inner-container .alignwide .wp-block-group__inner-container .presentation .wp-block-media-text__content hr {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+body #accueil #nosformules_accueil .container .texte_sct_area .span_separators {
+  width: 70%;
+  height: 30px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #accueil #nosformules_accueil .container .texte_sct_area .span_separators span {
+  height: 2px;
   background-color: #EAAE0B;
-  height: 1px;
-  width: 40%;
-  margin: 5px 0;
-}
-
-body #accueil #presentation #content .wp-block-group .wp-block-group__inner-container .alignwide .wp-block-group__inner-container .presentation .wp-block-media-text__content p {
-  padding: 20px 0;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
-  font-size: 1.5rem;
-  color: #000000;
-  text-align: justify;
-}
-
-body #accueil #presentation #content .nos_formules {
-  margin: 2% 0;
+  border-radius: 2px;
   width: 80%;
-  background-color: #F6F6F6;
+}
+
+body #accueil #nosformules_accueil .container .texte_sct_area .span_separators .separator_1 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+body #accueil #nosformules_accueil .container .texte_sct_area .span_separators .separator_2 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+body #accueil #nosformules_accueil .container .btn_rouge {
+  background-color: #761F32;
+  border-radius: 10px;
+  height: 50px;
+  width: 225px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-body #accueil #presentation #content .nos_formules .wp-block-group__inner-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
 }
 
-body #accueil #presentation #content .nos_formules .wp-block-group__inner-container h2 {
+body #accueil #nosformules_accueil .container .btn_rouge a {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  color: #000000;
-  padding: 20px 0;
-}
-
-body #accueil #presentation #content .nos_formules .wp-block-group__inner-container hr {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  background-color: #EAAE0B;
-  height: 1px;
-  width: 20%;
-  margin: 5px 0;
-}
-
-body #accueil #presentation #content .nos_formules .wp-block-group__inner-container .alignnormal {
-  width: 100%;
-}
-
-body #accueil #presentation #content .nos_formules .wp-block-group__inner-container .alignnormal .slider {
-  width: 100%;
-  padding: 10px 0;
-}
-
-body #accueil #presentation #content .nos_formules .wp-block-group__inner-container .alignnormal .slider ul li {
-  list-style-type: none;
-  position: relative;
-  height: 60vh;
-  overflow: hidden;
-}
-
-body #accueil #presentation #content .nos_formules .wp-block-group__inner-container .alignnormal .slider ul li img {
-  width: 100%;
-  height: auto;
-}
-
-body #accueil #presentation #content .nos_formules .wp-block-group__inner-container .alignnormal .slider ul li .caption-wrap {
-  bottom: 0;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 100%;
-}
-
-body #accueil #presentation #content .nos_formules .wp-block-group__inner-container .alignnormal .slider ul li .caption-wrap .caption {
+  font-weight: 700;
+  font-size: 1.5rem;
   color: #FFFFFF;
-  padding: 15px 10px;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */
