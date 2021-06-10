@@ -1,0 +1,152 @@
+
+#contact{
+
+    display: flex;
+    flex-direction: column;
+
+
+
+    .mapp{
+
+        order: 1;
+        margin-top: 10%;
+        margin-bottom: 0;
+
+        img{
+            @media screen and (max-width: 376px){
+                height: auto;
+            }
+        }
+    }
+}
+
+
+img{
+
+    
+    width: 100%;
+    height: 100vh;
+}
+.wp-block-cover__inner-container{
+    background-color: transparent;
+    @media screen and (max-width: 376px){
+        width: auto;
+    }
+    
+    p{
+        font-family: $font_h1;
+        font-weight: 400;
+        font-size: 5.125rem;
+        letter-spacing: 10%;
+        color: #FFFFFF;
+        text-shadow: 0 0 8px #000000;
+        @media screen and (max-width: 376px){
+            font-size: 4em !important;
+        }
+    }
+}
+
+
+
+
+.formulaire{
+
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-around;
+    font-family: 'Montserrat', sans-serif;
+    margin-block-start: 10%;
+    @media screen and (max-width: 376px){
+        flex-direction: column;
+    }
+
+    .form_1{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 40%;
+        @media screen and (max-width: 376px){
+            width: 100%;
+        }
+
+        .form_2{
+
+            background-color: #F4F0E4;
+            font-weight: bold;
+            width: auto;
+
+            .form_3{
+                
+                padding: 10%;
+
+                i{
+                    color: #761F32;
+                }
+                p{
+
+                }
+            }
+
+            
+        }
+        .reserver{
+
+            background-color: #761F32;
+            color: white;
+            width: 60%;
+            align-self: center;
+            margin-top: 5%;
+            font-weight: 600;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            padding: 2%;
+
+        }
+        .reserver:hover {
+            transform: scale(1.05);
+            transition: 0.2s;
+            box-shadow: 0 0 10px #000000;
+        }
+    }
+    .wpcf7{
+
+        width: 30%;
+        display: contents;
+        font-family: 'Montserrat', sans-serif;
+
+        input{
+            background-color: #F4F0E4 !important;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            height: 30px;
+            font-weight: 600;
+        }
+        textarea{
+            background-color: #F4F0E4 !important;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            height: auto;
+            width: 100%;
+            font-weight: 600;
+        }
+        p{
+            text-align: -webkit-right;
+        }
+        #envoyer{
+            width: 40%;
+            background-color: #761F32 !important;
+            color: white;
+            display: flex;
+            justify-content: center;
+            font-weight: 600;
+        }
+        #envoyer:hover {
+            transform: scale(1.05);
+            transition: 0.2s;
+            box-shadow: 0 0 10px #000000;
+        }
+    }      
+}

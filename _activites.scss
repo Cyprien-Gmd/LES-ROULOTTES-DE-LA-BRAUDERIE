@@ -1,0 +1,30 @@
+
+
+//----SECTION HERO
+.wp-block-cover{
+
+    img{
+
+    }
+    p{
+        font-family: $font_h1;
+        font-weight: 400;
+        font-size: 5.125rem;
+        letter-spacing: 10%;
+        color: #FFFFFF;
+        text-shadow: 0 0 8px #000000;
+    }
+}
+
+
+.gallerie{
+
+    width: 90%;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+
+    .blocks-gallery-item__caption{
+        font-family: 'Montserrat', sans-serif;
+    }
+
+}
