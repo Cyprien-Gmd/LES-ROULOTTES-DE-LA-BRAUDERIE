@@ -1,0 +1,861 @@
+/*
+Theme Name: LRDB
+Author: Cyprien / Filipe / François
+Description: Les roulottes de ses morts
+Version: 1.0
+Tags: black, white
+Text Domain: LRDB
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+
+
+@import "./style/variables";
+@import "./style/header";
+@import "./style/extras";
+@import "./style/contact";
+@import "./style/footer";
+
+body {
+
+
+    // PAGE ACCUEIL
+    #accueil {
+        #content {
+
+            // SECTION HERO
+            .has-background-dim {
+                width: 100%;
+                height: 100vh;
+                background-color: transparent;
+                padding: 0;
+
+                @media (max-width: 768px) {
+                    height: 75vh;
+                }
+
+                @media (max-width: 375px) {
+                    height: 50vh;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                // H1
+                .wp-block-cover__inner-container {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        text-transform: uppercase;
+                        text-align: center;
+                        font-family: $font_h1;
+                        font-weight: 400;
+                        font-size: 5.125rem;
+                        letter-spacing: 10px;
+                        color: #FFFFFF;
+                        text-shadow: 0 0 8px #000000;
+
+                        @media (max-width: 768px) {
+                            font-size: 3.5rem;
+                        }
+
+                        @media (max-width: 375px) {
+                            font-size: 2rem;
+                        }
+                    }
+
+                }
+
+            }
+
+            // SECTION PRESENTATION
+            .presentation {
+                width: 80%;
+                margin: 25px auto;
+                background-color: $couleur_4;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    width: 95%;
+                }
+
+                @media (max-width: 600px) {
+                    width: 100%;
+                }
+
+                // IMG
+                .wp-block-column:nth-child(1) {
+                    height: 100%;
+
+                    .wp-block-image {
+                        margin: 0;
+
+                        figure {
+                            height: 100%;
+                            margin: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            img {
+                                object-fit: cover;
+                                width: auto;
+                                height: 100%;
+                            }
+                        }
+                    }
+
+
+                }
+
+                // TEXTE
+                .wp-block-column:nth-child(2) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+
+                    h2 {
+                        align-self: center;
+                        font-family: $font_titre_sct;
+                        font-weight: 400;
+                        font-size: 2rem;
+                        color: #000000;
+                        padding: 10px;
+                    }
+
+                    // SEPARATOR
+                    hr {
+                        align-self: center;
+                        height: 2px;
+                        background-color: $couleur_1;
+                        border-radius: 1px;
+                        width: 60%;
+                        margin: 5px 0;
+                        border: 0;
+                    }
+
+                    // SEPARATOR 1
+                    .wp-block-separator:nth-child(1) {
+                        margin-left: -5%;
+                    }
+
+                    // SEPARATOR 2
+                    .wp-block-separator:nth-child(2) {
+                        margin-left: 5%;
+                    }
+
+                    // TEXT PARAGRAPHE
+                    p {
+                        font-family: $font_paragraphe;
+                        font-weight: 400;
+                        font-size: 1.25rem;
+                        color: #000000;
+                        text-align: justify;
+                        padding: 10px;
+
+                        @media (max-width: 768px) {
+                            font-size: 1.25rem;
+                        }
+
+                        @media (max-width: 375px) {
+                            font-size: 1rem;
+                        }
+                    }
+
+                }
+
+            }
+
+            // SECTION NOS FORMULES
+            .nos_formules {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 25px 0;
+
+                .wp-block-group__inner-container {
+                    width: 80%;
+                    margin: auto;
+                    background-color: $couleur_4;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    @media (max-width: 768px) {
+                        width: 95%;
+                    }
+
+                    @media (max-width: 600px) {
+                        width: 100%;
+                    }
+
+                    // TITRE SECTION
+                    h2 {
+                        align-self: center;
+                        font-family: $font_titre_sct;
+                        font-weight: 400;
+                        font-size: 2rem;
+                        color: #000000;
+                        padding: 10px;
+                    }
+
+                    // SEPARATOR
+                    hr {
+                        height: 2px;
+                        background-color: $couleur_1;
+                        border-radius: 1px;
+                        width: 30%;
+                        margin: 5px 0;
+                        border: 0;
+                    }
+
+                    .wp-block-separator:nth-child(1) {
+                        margin-left: -5%;
+                    }
+
+                    .wp-block-separator:nth-child(2) {
+                        margin-left: 5%;
+                    }
+
+                    // FIN DES SEPARATORS
+
+                    // SLIDER
+                    .alignnormal {
+                        width: 100%;
+                        height: 650px;
+                        overflow: hidden;
+                        padding: 20px 0;
+
+                        @media (max-width: 768px) {
+                            height: auto;
+                        }
+
+                        #metaslider-id-60 {
+                            height: 100%;
+                            padding: 0;
+
+                            #metaslider_container_60 {
+                                height: 100%;
+                                width: auto;
+
+                                // UL SLIDES
+                                #metaslider_60 {
+                                    height: 100%;
+
+                                    li {
+
+                                        object-fit: fill;
+                                        height: 100%;
+
+                                        img {
+                                            height: auto;
+
+                                        }
+
+                                        // BANDE CAPTION
+                                        .caption-wrap {
+                                            bottom: 0;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+
+                                            // TEXT CAPTION
+                                            .caption {
+                                                font-family: $font_paragraphe;
+                                                font-weight: 500;
+                                                font-size: 1.5rem;
+                                                color: #FFFFFF;
+                                                text-transform: capitalize;
+                                                padding: 20px 0;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                // BTN PREV
+                                .prev {
+                                    background-color: rgba($color: $couleur_2, $alpha: 0.8);
+                                    border-radius: 0 5px 5px 0;
+                                    font-size: 0;
+                                    padding: 0 40px 0 40px;
+
+                                    @media (max-width: 768px) {
+                                        padding: 0 10px 0 10px;
+                                        height: 10%;
+                                    }
+
+                                    @media (max-width: 375px) {
+                                        display: none;
+                                    }
+                                }
+
+                                // BTN NEXT
+                                .next {
+                                    background-color: rgba($color: $couleur_2, $alpha: 0.8);
+                                    border-radius: 5px 0 0 5px;
+                                    font-size: 0;
+                                    padding: 0 40px 0 40px;
+
+                                    @media (max-width: 768px) {
+                                        padding: 0 10px 0 10px;
+                                        height: 10%;
+                                    }
+
+                                    @media (max-width: 375px) {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // BOUTON
+                    .wp-block-buttons {
+                        padding: 25px 0;
+
+                        .wp-block-button {
+
+                            a {
+                                background-color: $couleur_2;
+                                border-radius: 10px;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                font-family: $font_titre_sct;
+                            }
+
+                            a:hover {
+                                transform: scale(1.05);
+                                transition: 0.2s;
+                                box-shadow: 0 0 10px #000000;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // SECTION LES ACTIVITÉS
+            .les_activites {
+                width: 80%;
+                margin: auto;
+                padding: 25px 0;
+
+                @media (max-width: 768px) {
+                    width: 95%;
+                }
+
+                @media (max-width: 375px) {
+                    width: 100%;
+                }
+
+                .wp-block-group__inner-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    background-color: $couleur_4;
+
+
+                    // TITRE SECTION
+                    h2 {
+                        align-self: center;
+                        font-family: $font_titre_sct;
+                        font-weight: 400;
+                        font-size: 2rem;
+                        color: #000000;
+                        padding: 10px;
+                    }
+
+                    // SEPARATOR
+                    hr {
+                        height: 2px;
+                        background-color: $couleur_1;
+                        border-radius: 1px;
+                        width: 30%;
+                        margin: 5px 0;
+                        border: 0;
+                    }
+
+                    .wp-block-separator:nth-child(1) {
+                        margin-left: -5%;
+                    }
+
+                    .wp-block-separator:nth-child(2) {
+                        margin-left: 5%;
+                    }
+
+                    // CARDS
+                    .wp-block-columns {
+                        width: 95%;
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+
+                        @media (max-width :768px) {
+                            flex-direction: column;
+                        }
+
+                        // CARD 1
+                        .wp-block-column:nth-child(1) {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+                            align-items: center;
+                            background-color: $couleur_5;
+                            border-radius: 10px;
+                            overflow: hidden;
+                            margin: 15px;
+
+
+
+                            // FIGURE
+                            .wp-block-image {
+                                object-fit: cover;
+                                margin: 0;
+
+                                img {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                            }
+
+                            // TITRE SECTION
+                            h2 {
+                                align-self: center;
+                                font-family: $font_titre_sct;
+                                font-weight: 400;
+                                font-size: 2rem;
+                                color: #000000;
+                                padding: 10px;
+                                text-align: center;
+
+                                @media (max-width: 375px) {
+                                    font-size: 1.5rem;
+                                }
+                            }
+
+                            // SEPARATOR
+                            hr {
+                                height: 2px;
+                                background-color: $couleur_2;
+                                border-radius: 1px;
+                                width: 30%;
+                                margin: 5px 0;
+                                border: 0;
+                            }
+
+                            .separator_1 {
+                                margin-left: -5%;
+                            }
+
+                            .separator_2 {
+                                margin-left: 5%;
+                            }
+
+                            // BOUTON
+                            .wp-block-buttons {
+                                padding: 25px 0;
+
+                                .wp-block-button {
+
+                                    a {
+                                        background-color: #FFFFFF;
+                                        color: $couleur_1;
+                                        border-radius: 10px;
+                                        font-weight: 700;
+                                        text-transform: uppercase;
+                                        font-family: $font_titre_sct;
+                                    }
+
+                                    a:hover {
+                                        transform: scale(1.05);
+                                        transition: 0.2s;
+                                        box-shadow: 0 0 10px #000000;
+                                    }
+                                }
+                            }
+                        }
+
+                        // CARD 2
+                        .wp-block-column:nth-child(2) {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+                            align-items: center;
+                            background-color: $couleur_5;
+                            border-radius: 10px;
+                            overflow: hidden;
+                            margin: 15px;
+
+                            // FIGURE
+                            .wp-block-image {
+                                object-fit: cover;
+                                margin: 0;
+
+                                img {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                            }
+
+                            // TITRE SECTION
+                            h2 {
+                                align-self: center;
+                                font-family: $font_titre_sct;
+                                font-weight: 400;
+                                font-size: 2rem;
+                                color: #000000;
+                                padding: 10px;
+                                text-align: center;
+
+                                @media (max-width: 375px) {
+                                    font-size: 1.5rem;
+                                }
+                            }
+
+                            // SEPARATOR
+                            hr {
+                                height: 2px;
+                                background-color: $couleur_2;
+                                border-radius: 1px;
+                                width: 30%;
+                                margin: 5px 0;
+                                border: 0;
+                            }
+
+                            .separator_1 {
+                                margin-left: -5%;
+                            }
+
+                            .separator_2 {
+                                margin-left: 5%;
+                            }
+
+                            // BOUTON
+                            .wp-block-buttons {
+                                padding: 25px 0;
+
+                                .wp-block-button {
+
+                                    a {
+                                        background-color: #FFFFFF;
+                                        color: $couleur_1;
+                                        border-radius: 10px;
+                                        font-weight: 700;
+                                        text-transform: uppercase;
+                                        font-family: $font_titre_sct;
+                                    }
+
+                                    a:hover {
+                                        transform: scale(1.05);
+                                        transition: 0.2s;
+                                        box-shadow: 0 0 10px #000000;
+                                    }
+                                }
+                            }
+                        }
+
+                        // CARD 3
+                        .wp-block-column:nth-child(3) {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+                            align-items: center;
+                            background-color: $couleur_5;
+                            border-radius: 10px;
+                            overflow: hidden;
+                            margin: 15px;
+
+                            // FIGURE
+                            .wp-block-image {
+                                object-fit: cover;
+                                margin: 0;
+
+                                img {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                            }
+
+                            // TITRE SECTION
+                            h2 {
+                                align-self: center;
+                                font-family: $font_titre_sct;
+                                font-weight: 400;
+                                font-size: 2rem;
+                                color: #000000;
+                                padding: 10px;
+                                text-align: center;
+
+                                @media (max-width: 375px) {
+                                    font-size: 1.5rem;
+                                }
+                            }
+
+                            // SEPARATOR
+                            hr {
+                                height: 2px;
+                                background-color: $couleur_2;
+                                border-radius: 1px;
+                                width: 30%;
+                                margin: 5px 0;
+                                border: 0;
+                            }
+
+                            .separator_1 {
+                                margin-left: -5%;
+                            }
+
+                            .separator_2 {
+                                margin-left: 5%;
+                            }
+
+                            // BOUTON
+                            .wp-block-buttons {
+                                padding: 25px 0;
+
+                                .wp-block-button {
+
+                                    a {
+                                        background-color: #FFFFFF;
+                                        color: $couleur_1;
+                                        border-radius: 10px;
+                                        font-weight: 700;
+                                        text-transform: uppercase;
+                                        font-family: $font_titre_sct;
+                                    }
+
+                                    a:hover {
+                                        transform: scale(1.05);
+                                        transition: 0.2s;
+                                        box-shadow: 0 0 10px #000000;
+                                    }
+                                }
+                            }
+                        }
+
+                        // HOVER
+                        .wp-block-column:hover {
+                            transition: .2s;
+                            transform: scale(1.02);
+                            box-shadow: 0 0 10px #000000;
+                        }
+                    }
+
+                    // BTN VOIR PLUS
+                    .wp-block-buttons {
+                        padding: 25px 0;
+
+                        .wp-block-button {
+
+                            a {
+                                background-color: $couleur_2;
+                                border-radius: 10px;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                font-family: $font_titre_sct;
+                            }
+
+                            a:hover {
+                                transform: scale(1.05);
+                                transition: 0.2s;
+                                box-shadow: 0 0 10px #000000;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            // SECTION ILS ONT AIMÉS
+            .google_reviews {
+                width: 80%;
+                margin: 25px auto 0 auto;
+                background-color: $couleur_4;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    width: 95%;
+                }
+
+                @media (max-width: 600px) {
+                    width: 100%;
+                }
+
+                // TEXTE
+                .wp-block-column {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+
+                    // TITRE SECTION
+                    h2 {
+                        align-self: center;
+                        font-family: $font_titre_sct;
+                        font-weight: 400;
+                        font-size: 2rem;
+                        color: #000000;
+                        padding: 10px;
+                    }
+
+                    // SEPARATOR
+                    hr {
+                        align-self: center;
+                        height: 2px;
+                        background-color: $couleur_1;
+                        border-radius: 1px;
+                        width: 60%;
+                        margin: 5px 0;
+                        border: 0;
+                    }
+
+                    .wp-block-separator:nth-child(1) {
+                        margin-left: -5%;
+                    }
+
+                    .wp-block-separator:nth-child(2) {
+                        margin-left: 5%;
+                    }
+
+                    // ------ FIN SEPARATOR ------
+
+
+                    p {
+                        font-family: $font_paragraphe;
+                        font-weight: 500;
+                        font-size: 1.5rem;
+                        color: #000000;
+                        text-align: justify;
+                        padding: 10px;
+
+                        @media (max-width: 768px) {
+                            font-size: 1.25rem;
+                        }
+
+                        @media (max-width: 375px) {
+                            font-size: 1rem;
+                        }
+                    }
+
+                }
+            }
+
+            // CARDS REVIEWS
+            #cards_reviews {
+                width: 80%;
+                margin: 0 auto 25px auto;
+                padding: 20px 0;
+                background-color: $couleur_4;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                align-items: center;
+
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    width: 95%;
+                }
+
+                @media (max-width: 600px) {
+                    width: 100%;
+                }
+
+                .card {
+                    background-color: #FFFFFF;
+                    width: 45%;
+                    padding: 10px;
+                    border-radius: 5px;
+                    margin: 10px 0;
+                    height: 175px;
+                    box-shadow: 2px 2px 8px rgba($color: #000000, $alpha: 0.25);
+                    overflow-y: scroll;
+
+
+
+                    @media (max-width: 768px) {
+                        width: 90%;
+                    }
+
+                    .profile {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        padding: 10px 0;
+
+                        img {
+                            border-radius: 50%;
+                            width: 50px;
+                            height: 50px;
+                        }
+
+                        h2 {
+                            align-self: center;
+                            font-family: $font_titre_sct;
+                            font-weight: 400;
+                            font-size: 1.5rem;
+                            color: #000000;
+                            padding-left: 10px;
+                            text-transform: capitalize;
+                        }
+                    }
+
+                    .description {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        overflow: hidden;
+
+
+                        // NOTE */*
+                        .note {
+                            font-family: $font_titre_sct;
+                            font-weight: 700;
+                            padding: 5px 0;
+                            font-size: 1.25rem;
+                            color: $couleur_1;
+                        }
+
+                        // DESCRIPTION
+                        p {
+                            text-align: justify;
+                            font-family: $font_titre_sct;
+                            font-weight: 400;
+                            font-size: 0.9rem;
+                            color: #000000;
+
+                        }
+                    }
+
+                }
+
+                .card::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+        }
+    }
+
+
+}

@@ -5,7 +5,7 @@ header {
     display: flex;
     justify-content: center;
     position: absolute;
-    z-index: 2;
+    z-index: 9;
 
     @media (max-width: 768px) {
         height: 75px;
@@ -33,6 +33,7 @@ header {
 
             img {
                 height: 100%;
+                width: auto;
             }
         }
 
