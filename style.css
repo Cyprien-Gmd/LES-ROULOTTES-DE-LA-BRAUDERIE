@@ -13,6 +13,7 @@ Text Domain: LRDB
   outline: none;
   text-decoration: none;
   list-style-type: none;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -26,7 +27,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  z-index: 2;
+  z-index: 9;
 }
 
 @media (max-width: 768px) {
@@ -275,6 +276,62 @@ header nav .menu_burger #burger_icon i {
   padding: 20px 0;
 }
 
+.phone {
+  top: 175px;
+  right: 0;
+  z-index: 3;
+  position: fixed;
+}
+
+.phone a i {
+  color: #FFFFFF;
+  font-size: 1.75rem;
+  background-color: rgba(21, 28, 43, 0.5);
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+}
+
+.phone a i:hover {
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
+  color: #EAAE0B;
+}
+
+.on_top {
+  bottom: 50px;
+  right: 20px;
+  z-index: 1;
+  position: fixed;
+  cursor: pointer;
+  border: 3px solid #000000;
+  -webkit-box-shadow: 0 0 5px #000000;
+          box-shadow: 0 0 5px #000000;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.on_top i {
+  color: #000000;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.on_top:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
 #contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,47 +342,64 @@ header nav .menu_burger #burger_icon i {
           flex-direction: column;
 }
 
-#contact .mapp {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  margin-top: 10%;
-  margin-bottom: 0;
-}
-
-@media screen and (max-width: 376px) {
-  #contact .mapp img {
-    height: auto;
-  }
-}
-
-#contact img {
+#contact .has-background-dim {
   width: 100%;
   height: 100vh;
-}
-
-#contact .wp-block-cover__inner-container {
   background-color: transparent;
+  padding: 0;
 }
 
-@media screen and (max-width: 376px) {
-  #contact .wp-block-cover__inner-container {
-    width: auto;
+@media (max-width: 768px) {
+  #contact .has-background-dim {
+    height: 75vh;
   }
 }
 
-#contact .wp-block-cover__inner-container p {
+@media (max-width: 375px) {
+  #contact .has-background-dim {
+    height: 50vh;
+  }
+}
+
+#contact .has-background-dim img {
+  width: 100%;
+  height: 100%;
+}
+
+#contact .has-background-dim .wp-block-cover__inner-container {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact .has-background-dim .wp-block-cover__inner-container p {
+  text-transform: uppercase;
+  text-align: center;
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
   font-size: 5.125rem;
-  letter-spacing: 10%;
+  letter-spacing: 10px;
   color: #FFFFFF;
   text-shadow: 0 0 8px #000000;
 }
 
+@media (max-width: 768px) {
+  #contact .has-background-dim .wp-block-cover__inner-container p {
+    font-size: 3.5rem;
+  }
+}
+
 @media (max-width: 375px) {
-  #contact .wp-block-cover__inner-container p {
-    font-size: 2em;
+  #contact .has-background-dim .wp-block-cover__inner-container p {
+    font-size: 2rem;
   }
 }
 
@@ -456,6 +530,16 @@ header nav .menu_burger #burger_icon i {
   transition: 0.2s;
   -webkit-box-shadow: 0 0 10px #000000;
           box-shadow: 0 0 10px #000000;
+}
+
+#contact .map_google {
+  margin-top: 25px;
+  height: 400px;
+}
+
+#contact .map_google iframe {
+  width: 100%;
+  height: 100%;
 }
 
 footer {
@@ -614,7 +698,7 @@ body #accueil #content .has-background-dim .wp-block-cover__inner-container p {
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
   font-size: 5.125rem;
-  letter-spacing: 10%;
+  letter-spacing: 10px;
   color: #FFFFFF;
   text-shadow: 0 0 8px #000000;
 }

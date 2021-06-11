@@ -13,14 +13,18 @@ Text Domain: LRDB
     outline: none;
     text-decoration: none;
     list-style-type: none;
+    scroll-behavior: smooth;
 }
+
 
 @import "./style/variables";
 @import "./style/header";
+@import "./style/extras";
 @import "./style/contact";
 @import "./style/footer";
 
 body {
+
 
     // PAGE ACCUEIL
     #accueil {
@@ -60,7 +64,7 @@ body {
                         font-family: $font_h1;
                         font-weight: 400;
                         font-size: 5.125rem;
-                        letter-spacing: 10%;
+                        letter-spacing: 10px;
                         color: #FFFFFF;
                         text-shadow: 0 0 8px #000000;
 

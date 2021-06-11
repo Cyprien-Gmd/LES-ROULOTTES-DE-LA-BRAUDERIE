@@ -4,6 +4,8 @@
 
 <main id="accueil">
 
+    <?php include('extras.php') ?>
+
     <span id="content">
         <?php the_content(); ?>     
     
