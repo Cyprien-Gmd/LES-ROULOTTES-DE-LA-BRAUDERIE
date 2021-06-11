@@ -4,14 +4,13 @@
 <head <?php language_attributes(); ?>>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <title>
         <?php the_title(); ?>
     </title>
 
     <?php wp_head(); ?>
-
 </head>
 
 <body <?php body_class(); ?>> 
@@ -22,7 +21,7 @@
     <nav class="headernav">
         <!-- LOGO NAV -->
         <div id="logo_site">
-            <img src="./wp-content/themes/lrdb/img/logo_ldlb.png" alt="logo roulotte de la brauderie">
+            <img src="http://localhost/LRDB/wp-content/uploads/2021/06/logo_ldlb.png" alt="logo roulotte de la brauderie">
         </div>
 
         <!-- MENU WORDPRESS -->
@@ -72,9 +71,8 @@
             </div>
         
             <a href="#" id="burger_icon" onclick="openNav()">
-            <i class="fas fa-bars"></i>
+                <i class="fas fa-bars"></i>
             </a>
         </div>
     </nav>
-
 </header>

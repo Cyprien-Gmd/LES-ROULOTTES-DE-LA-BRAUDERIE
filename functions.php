@@ -57,6 +57,7 @@ function setup_theme() {
 function ajout_scripts(){
     wp_enqueue_style('style', get_stylesheet_uri());
     wp_enqueue_script('jquery', get_template_directory_uri() . './js/script.js', array('jquery'));
+    wp_enqueue_script( 'burger', './wp-content/themes/lrdb/js/script.js');
 }
     add_action('wp_enqueue_scripts', 'ajout_scripts');
 // --------------------
@@ -75,6 +76,7 @@ function mytheme_post_thumbnails() {
 }
 add_action( 'after_setup_theme', 'mytheme_post_thumbnails' );
 // TAILLE DU THUMBNAIL
+add_image_size( 'profile-thumbnail', 50, 50 );
 add_image_size( 'post-thumbnail', 150, 150 );
 add_image_size( 'medium-thumbnail', 300, 300 );
 add_image_size( 'large-thumbnail', 1024, 1024 );

@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*
-Theme Name: Le un
+Theme Name: LRDB
 Author: Cyprien / Filipe / François
 Description: Les roulottes de ses morts
 Version: 1.0
 Tags: black, white
-Text Domain: Le un
+Text Domain: LRDB
 */
 * {
   padding: 0;
@@ -68,6 +68,7 @@ header nav #logo_site {
 
 header nav #logo_site img {
   height: 100%;
+  width: auto;
 }
 
 header nav #nav_full {
@@ -87,7 +88,7 @@ header nav #nav_full {
   }
 }
 
-header nav #nav_full div {
+header nav #nav_full .menu-menu-1-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,24 +97,37 @@ header nav #nav_full div {
           justify-content: flex-end;
 }
 
-header nav #nav_full div ul {
-  width: 80%;
+header nav #nav_full .menu-menu-1-container ul {
+  min-width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-header nav #nav_full div ul li {
-  list-style-type: none;
+@media (max-width: 1200px) {
+  header nav #nav_full .menu-menu-1-container ul {
+    width: 90%;
+  }
 }
 
-header nav #nav_full div ul li a {
+@media (max-width: 900px) {
+  header nav #nav_full .menu-menu-1-container ul {
+    width: 100%;
+  }
+}
+
+header nav #nav_full .menu-menu-1-container ul li {
+  list-style-type: none;
+  padding: 0px 10px;
+}
+
+header nav #nav_full .menu-menu-1-container ul li a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1rem;
@@ -122,15 +136,15 @@ header nav #nav_full div ul li a {
   font-family: "Montserrat", sans-serif;
 }
 
-@media (max-width: 1000px) {
-  header nav #nav_full div ul li a {
+@media (max-width: 1100px) {
+  header nav #nav_full .menu-menu-1-container ul li a {
     font-size: 0.75rem;
   }
 }
 
-header nav #nav_full div ul li a:hover {
+header nav #nav_full .menu-menu-1-container ul li a:hover {
   color: #EAAE0B;
-  text-shadow: 0 0 10px #000000;
+  text-shadow: 0 0 5px #000000;
 }
 
 header nav .menu_burger {
@@ -258,21 +272,330 @@ header nav .menu_burger #burger_icon i {
   color: #FFFFFF;
   font-size: 30px;
   cursor: pointer;
-  padding: 20px;
+  padding: 20px 0;
 }
 
-body #accueil #content .wp-block-columns:nth-child(1) .wp-block-column .wp-block-cover {
+#contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact .mapp {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin-top: 10%;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 376px) {
+  #contact .mapp img {
+    height: auto;
+  }
+}
+
+#contact img {
+  width: 100%;
   height: 100vh;
+}
+
+#contact .wp-block-cover__inner-container {
   background-color: transparent;
 }
 
-body #accueil #content .wp-block-columns:nth-child(1) .wp-block-column .wp-block-cover img {
-  width: 100%;
-  height: 100vh;
+@media screen and (max-width: 376px) {
+  #contact .wp-block-cover__inner-container {
+    width: auto;
+  }
 }
 
-body #accueil #content .wp-block-columns:nth-child(1) .wp-block-column .wp-block-cover .wp-block-cover__inner-container {
+#contact .wp-block-cover__inner-container p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 5.125rem;
+  letter-spacing: 10%;
+  color: #FFFFFF;
+  text-shadow: 0 0 8px #000000;
+}
+
+@media (max-width: 375px) {
+  #contact .wp-block-cover__inner-container p {
+    font-size: 2em;
+  }
+}
+
+#contact .formulaire {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-margin-before: 10%;
+          margin-block-start: 10%;
+}
+
+@media screen and (max-width: 376px) {
+  #contact .formulaire {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#contact .formulaire .form_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 40%;
+}
+
+@media screen and (max-width: 376px) {
+  #contact .formulaire .form_1 {
+    width: 100%;
+  }
+}
+
+#contact .formulaire .form_1 .form_2 {
+  background-color: #F4F0E4;
+  font-weight: bold;
+  width: auto;
+}
+
+#contact .formulaire .form_1 .form_2 .form_3 {
+  padding: 10%;
+}
+
+#contact .formulaire .form_1 .form_2 .form_3 i {
+  color: #761F32;
+}
+
+#contact .formulaire .form_1 .reserver {
+  background-color: #761F32;
+  color: white;
+  width: 60%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 5%;
+  font-weight: 600;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  padding: 2%;
+}
+
+#contact .formulaire .form_1 .reserver:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
+}
+
+#contact .formulaire .wpcf7 {
+  width: 30%;
+  display: contents;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#contact .formulaire .wpcf7 input {
+  background-color: #F4F0E4 !important;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  height: 30px;
+  font-weight: 600;
+}
+
+#contact .formulaire .wpcf7 textarea {
+  background-color: #F4F0E4 !important;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  height: auto;
   width: 100%;
+  font-weight: 600;
+}
+
+#contact .formulaire .wpcf7 p {
+  text-align: -webkit-right;
+}
+
+#contact .formulaire .wpcf7 #envoyer {
+  width: 40%;
+  background-color: #761F32 !important;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+}
+
+#contact .formulaire .wpcf7 #envoyer:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
+}
+
+footer {
+  background-color: #303030;
+  width: 100%;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+footer .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+@media screen and (max-width: 376px) {
+  footer .contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+footer .contacts .contact1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 30px 0;
+}
+
+footer .contacts .contact1 i {
+  padding: 10px;
+}
+
+footer .contacts .contact1 p {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  footer .contacts .contact1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 375px) {
+  footer .contacts .contact1 {
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  footer .contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+footer .subfooter {
+  margin: 0;
+}
+
+footer .subfooter .ligne {
+  background-color: #EAAE0B;
+  color: #EAAE0B;
+  height: 2px;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+footer .subfooter .mentions {
+  width: 80%;
+  margin: auto;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 30px 0;
+}
+
+@media (max-width: 375px) {
+  footer .subfooter .mentions {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+body #accueil #content .has-background-dim {
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  body #accueil #content .has-background-dim {
+    height: 75vh;
+  }
+}
+
+@media (max-width: 375px) {
+  body #accueil #content .has-background-dim {
+    height: 50vh;
+  }
+}
+
+body #accueil #content .has-background-dim img {
+  width: 100%;
+  height: 100%;
+}
+
+body #accueil #content .has-background-dim .wp-block-cover__inner-container {
+  width: 50%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,7 +608,7 @@ body #accueil #content .wp-block-columns:nth-child(1) .wp-block-column .wp-block
           align-items: center;
 }
 
-body #accueil #content .wp-block-columns:nth-child(1) .wp-block-column .wp-block-cover .wp-block-cover__inner-container p {
+body #accueil #content .has-background-dim .wp-block-cover__inner-container p {
   text-transform: uppercase;
   text-align: center;
   font-family: "Cormorant Garamond", serif;
@@ -296,9 +619,21 @@ body #accueil #content .wp-block-columns:nth-child(1) .wp-block-column .wp-block
   text-shadow: 0 0 8px #000000;
 }
 
-body #accueil #content .wp-block-columns:nth-child(2) {
+@media (max-width: 768px) {
+  body #accueil #content .has-background-dim .wp-block-cover__inner-container p {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  body #accueil #content .has-background-dim .wp-block-cover__inner-container p {
+    font-size: 2rem;
+  }
+}
+
+body #accueil #content .presentation {
   width: 80%;
-  margin: auto;
+  margin: 25px auto;
   background-color: #F6F6F6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -311,16 +646,52 @@ body #accueil #content .wp-block-columns:nth-child(2) {
           align-items: center;
 }
 
-body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child(1) figure {
-  height: 70%;
-  overflow: hidden;
+@media (max-width: 768px) {
+  body #accueil #content .presentation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 95%;
+  }
 }
 
-body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child(1) figure img {
-  height: 80%;
+@media (max-width: 600px) {
+  body #accueil #content .presentation {
+    width: 100%;
+  }
 }
 
-body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child(2) {
+body #accueil #content .presentation .wp-block-column:nth-child(1) {
+  height: 100%;
+}
+
+body #accueil #content .presentation .wp-block-column:nth-child(1) .wp-block-image {
+  margin: 0;
+}
+
+body #accueil #content .presentation .wp-block-column:nth-child(1) .wp-block-image figure {
+  height: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #accueil #content .presentation .wp-block-column:nth-child(1) .wp-block-image figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: auto;
+  height: 100%;
+}
+
+body #accueil #content .presentation .wp-block-column:nth-child(2) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,9 +702,10 @@ body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
-body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child(2) h2 {
+body #accueil #content .presentation .wp-block-column:nth-child(2) h2 {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -344,7 +716,10 @@ body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child
   padding: 10px;
 }
 
-body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child(2) hr {
+body #accueil #content .presentation .wp-block-column:nth-child(2) hr {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   height: 2px;
   background-color: #EAAE0B;
   border-radius: 1px;
@@ -353,15 +728,683 @@ body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child
   border: 0;
 }
 
-body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child(2) .separator_1 {
-  margin-left: 20%;
+body #accueil #content .presentation .wp-block-column:nth-child(2) .wp-block-separator:nth-child(1) {
+  margin-left: -5%;
 }
 
-body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child(2) .separator_2 {
-  margin-left: 25%;
+body #accueil #content .presentation .wp-block-column:nth-child(2) .wp-block-separator:nth-child(2) {
+  margin-left: 5%;
 }
 
-body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child(2) p {
+body #accueil #content .presentation .wp-block-column:nth-child(2) p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #000000;
+  text-align: justify;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  body #accueil #content .presentation .wp-block-column:nth-child(2) p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 375px) {
+  body #accueil #content .presentation .wp-block-column:nth-child(2) p {
+    font-size: 1rem;
+  }
+}
+
+body #accueil #content .nos_formules {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 0;
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container {
+  width: 80%;
+  margin: auto;
+  background-color: #F6F6F6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  body #accueil #content .nos_formules .wp-block-group__inner-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  body #accueil #content .nos_formules .wp-block-group__inner-container {
+    width: 100%;
+  }
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #000000;
+  padding: 10px;
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container hr {
+  height: 2px;
+  background-color: #EAAE0B;
+  border-radius: 1px;
+  width: 30%;
+  margin: 5px 0;
+  border: 0;
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container .wp-block-separator:nth-child(1) {
+  margin-left: -5%;
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container .wp-block-separator:nth-child(2) {
+  margin-left: 5%;
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container .alignnormal {
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  body #accueil #content .nos_formules .wp-block-group__inner-container .alignnormal {
+    height: auto;
+  }
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container .alignnormal #metaslider-id-60 {
+  height: 100%;
+  padding: 0;
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container .alignnormal #metaslider-id-60 #metaslider_container_60 {
+  height: 100%;
+  width: auto;
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container .alignnormal #metaslider-id-60 #metaslider_container_60 #metaslider_60 {
+  height: 100%;
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container .alignnormal #metaslider-id-60 #metaslider_container_60 #metaslider_60 li {
+  -o-object-fit: fill;
+     object-fit: fill;
+  height: 100%;
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container .alignnormal #metaslider-id-60 #metaslider_container_60 #metaslider_60 li img {
+  height: auto;
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container .alignnormal #metaslider-id-60 #metaslider_container_60 #metaslider_60 li .caption-wrap {
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container .alignnormal #metaslider-id-60 #metaslider_container_60 #metaslider_60 li .caption-wrap .caption {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  padding: 20px 0;
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container .alignnormal #metaslider-id-60 #metaslider_container_60 .prev {
+  background-color: rgba(118, 31, 50, 0.8);
+  border-radius: 0 5px 5px 0;
+  font-size: 0;
+  padding: 0 40px 0 40px;
+}
+
+@media (max-width: 768px) {
+  body #accueil #content .nos_formules .wp-block-group__inner-container .alignnormal #metaslider-id-60 #metaslider_container_60 .prev {
+    padding: 0 10px 0 10px;
+    height: 10%;
+  }
+}
+
+@media (max-width: 375px) {
+  body #accueil #content .nos_formules .wp-block-group__inner-container .alignnormal #metaslider-id-60 #metaslider_container_60 .prev {
+    display: none;
+  }
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container .alignnormal #metaslider-id-60 #metaslider_container_60 .next {
+  background-color: rgba(118, 31, 50, 0.8);
+  border-radius: 5px 0 0 5px;
+  font-size: 0;
+  padding: 0 40px 0 40px;
+}
+
+@media (max-width: 768px) {
+  body #accueil #content .nos_formules .wp-block-group__inner-container .alignnormal #metaslider-id-60 #metaslider_container_60 .next {
+    padding: 0 10px 0 10px;
+    height: 10%;
+  }
+}
+
+@media (max-width: 375px) {
+  body #accueil #content .nos_formules .wp-block-group__inner-container .alignnormal #metaslider-id-60 #metaslider_container_60 .next {
+    display: none;
+  }
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container .wp-block-buttons {
+  padding: 25px 0;
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container .wp-block-buttons .wp-block-button a {
+  background-color: #761F32;
+  border-radius: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+body #accueil #content .nos_formules .wp-block-group__inner-container .wp-block-buttons .wp-block-button a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
+}
+
+body #accueil #content .les_activites {
+  width: 80%;
+  margin: auto;
+  padding: 25px 0;
+}
+
+@media (max-width: 768px) {
+  body #accueil #content .les_activites {
+    width: 95%;
+  }
+}
+
+@media (max-width: 375px) {
+  body #accueil #content .les_activites {
+    width: 100%;
+  }
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F6F6F6;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #000000;
+  padding: 10px;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container hr {
+  height: 2px;
+  background-color: #EAAE0B;
+  border-radius: 1px;
+  width: 30%;
+  margin: 5px 0;
+  border: 0;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-separator:nth-child(1) {
+  margin-left: -5%;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-separator:nth-child(2) {
+  margin-left: 5%;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #E7E7E7;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(1) .wp-block-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(1) .wp-block-image img {
+  width: 100%;
+  height: auto;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(1) h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #000000;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 375px) {
+  body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(1) h2 {
+    font-size: 1.5rem;
+  }
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(1) hr {
+  height: 2px;
+  background-color: #761F32;
+  border-radius: 1px;
+  width: 30%;
+  margin: 5px 0;
+  border: 0;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(1) .separator_1 {
+  margin-left: -5%;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(1) .separator_2 {
+  margin-left: 5%;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(1) .wp-block-buttons {
+  padding: 25px 0;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(1) .wp-block-buttons .wp-block-button a {
+  background-color: #FFFFFF;
+  color: #EAAE0B;
+  border-radius: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(1) .wp-block-buttons .wp-block-button a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #E7E7E7;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(2) .wp-block-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(2) .wp-block-image img {
+  width: 100%;
+  height: auto;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(2) h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #000000;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 375px) {
+  body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(2) h2 {
+    font-size: 1.5rem;
+  }
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(2) hr {
+  height: 2px;
+  background-color: #761F32;
+  border-radius: 1px;
+  width: 30%;
+  margin: 5px 0;
+  border: 0;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(2) .separator_1 {
+  margin-left: -5%;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(2) .separator_2 {
+  margin-left: 5%;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(2) .wp-block-buttons {
+  padding: 25px 0;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(2) .wp-block-buttons .wp-block-button a {
+  background-color: #FFFFFF;
+  color: #EAAE0B;
+  border-radius: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(2) .wp-block-buttons .wp-block-button a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #E7E7E7;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(3) .wp-block-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(3) .wp-block-image img {
+  width: 100%;
+  height: auto;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(3) h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #000000;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 375px) {
+  body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(3) h2 {
+    font-size: 1.5rem;
+  }
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(3) hr {
+  height: 2px;
+  background-color: #761F32;
+  border-radius: 1px;
+  width: 30%;
+  margin: 5px 0;
+  border: 0;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(3) .separator_1 {
+  margin-left: -5%;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(3) .separator_2 {
+  margin-left: 5%;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(3) .wp-block-buttons {
+  padding: 25px 0;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(3) .wp-block-buttons .wp-block-button a {
+  background-color: #FFFFFF;
+  color: #EAAE0B;
+  border-radius: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:nth-child(3) .wp-block-buttons .wp-block-button a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-columns .wp-block-column:hover {
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-buttons {
+  padding: 25px 0;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-buttons .wp-block-button a {
+  background-color: #761F32;
+  border-radius: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+body #accueil #content .les_activites .wp-block-group__inner-container .wp-block-buttons .wp-block-button a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
+}
+
+body #accueil #content .google_reviews {
+  width: 80%;
+  margin: 25px auto 0 auto;
+  background-color: #F6F6F6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  body #accueil #content .google_reviews {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  body #accueil #content .google_reviews {
+    width: 100%;
+  }
+}
+
+body #accueil #content .google_reviews .wp-block-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+body #accueil #content .google_reviews .wp-block-column h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #000000;
+  padding: 10px;
+}
+
+body #accueil #content .google_reviews .wp-block-column hr {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 2px;
+  background-color: #EAAE0B;
+  border-radius: 1px;
+  width: 60%;
+  margin: 5px 0;
+  border: 0;
+}
+
+body #accueil #content .google_reviews .wp-block-column .wp-block-separator:nth-child(1) {
+  margin-left: -5%;
+}
+
+body #accueil #content .google_reviews .wp-block-column .wp-block-separator:nth-child(2) {
+  margin-left: 5%;
+}
+
+body #accueil #content .google_reviews .wp-block-column p {
   font-family: "Cormorant Garamond", serif;
   font-weight: 500;
   font-size: 1.5rem;
@@ -370,65 +1413,101 @@ body #accueil #content .wp-block-columns:nth-child(2) .wp-block-column:nth-child
   padding: 10px;
 }
 
-body #accueil #content .wp-block-group:nth-child(1) {
+@media (max-width: 768px) {
+  body #accueil #content .google_reviews .wp-block-column p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 375px) {
+  body #accueil #content .google_reviews .wp-block-column p {
+    font-size: 1rem;
+  }
+}
+
+body #accueil #content #cards_reviews {
   width: 80%;
-  margin: auto;
+  margin: 0 auto 25px auto;
+  padding: 20px 0;
   background-color: #F6F6F6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-body #accueil #content .wp-block-group:nth-child(1) .wp-block-group__inner-container h2 {
+@media (max-width: 768px) {
+  body #accueil #content #cards_reviews {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  body #accueil #content #cards_reviews {
+    width: 100%;
+  }
+}
+
+body #accueil #content #cards_reviews .card {
+  background-color: #FFFFFF;
+  width: 45%;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  height: 175px;
+  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  overflow-y: scroll;
+}
+
+@media (max-width: 768px) {
+  body #accueil #content #cards_reviews .card {
+    width: 90%;
+  }
+}
+
+body #accueil #content #cards_reviews .card .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+}
+
+body #accueil #content #cards_reviews .card .profile img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+body #accueil #content #cards_reviews .card .profile h2 {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #000000;
-  padding: 10px;
+  padding-left: 10px;
+  text-transform: capitalize;
 }
 
-body #accueil #content .wp-block-group:nth-child(1) .wp-block-group__inner-container hr {
-  height: 2px;
-  background-color: #EAAE0B;
-  border-radius: 1px;
-  width: 60%;
-  margin: 5px 0;
-  border: 0;
-}
-
-body #accueil #content .wp-block-group:nth-child(1) .wp-block-group__inner-container .separator_1 {
-  margin-left: 20%;
-}
-
-body #accueil #content .wp-block-group:nth-child(1) .wp-block-group__inner-container .separator_2 {
-  margin-left: 25%;
-}
-
-body #accueil #nosformules_accueil {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 25px 0;
-}
-
-body #accueil #nosformules_accueil .container {
-  width: 80%;
-  background-color: #F6F6F6;
+body #accueil #content #cards_reviews .card .description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,95 +1515,29 @@ body #accueil #nosformules_accueil .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow: hidden;
 }
 
-body #accueil #nosformules_accueil .container .texte_sct_area {
-  width: 48%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #accueil #nosformules_accueil .container .texte_sct_area h2 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  color: #000000;
-  padding: 10px;
-}
-
-body #accueil #nosformules_accueil .container .texte_sct_area .span_separators {
-  width: 70%;
-  height: 30px;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #accueil #nosformules_accueil .container .texte_sct_area .span_separators span {
-  height: 2px;
-  background-color: #EAAE0B;
-  border-radius: 2px;
-  width: 80%;
-}
-
-body #accueil #nosformules_accueil .container .texte_sct_area .span_separators .separator_1 {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
-body #accueil #nosformules_accueil .container .texte_sct_area .span_separators .separator_2 {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-body #accueil #nosformules_accueil .container .btn_rouge {
-  background-color: #761F32;
-  border-radius: 10px;
-  height: 50px;
-  width: 225px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #accueil #nosformules_accueil .container .btn_rouge a {
+body #accueil #content #cards_reviews .card .description .note {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 1.5rem;
-  color: #FFFFFF;
-  text-transform: uppercase;
+  padding: 5px 0;
+  font-size: 1.25rem;
+  color: #EAAE0B;
+}
+
+body #accueil #content #cards_reviews .card .description p {
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #000000;
+}
+
+body #accueil #content #cards_reviews .card::-webkit-scrollbar {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

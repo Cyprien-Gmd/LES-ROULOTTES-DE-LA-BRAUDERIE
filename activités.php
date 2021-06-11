@@ -3,7 +3,9 @@
 ?>
 
 <main id="activités">
-
     
 
 </main>
+
+<?php the_content();
+?>
